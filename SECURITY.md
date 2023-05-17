@@ -1,21 +1,18 @@
 # Security Policy
 
-## Supported Versions
+## Did you find a security issue in the code?
 
-Use this section to tell people about which versions of your project are
-currently being supported with security updates.
+Please open a Pull Request (PR) with the prefix **[SECURITY]**.
+
+Every accepted Pull Request (PR), with the said prefix, will be fixed within 48 hours, guaranteed.
+
+
+
+## Timeline & Supported versions
 
 | Version | Supported          |
 | ------- | ------------------ |
-| 5.1.x   | :white_check_mark: |
-| 5.0.x   | :x:                |
-| 4.0.x   | :white_check_mark: |
-| < 4.0   | :x:                |
-
-## Reporting a Vulnerability
-
-Use this section to tell people how to report a vulnerability.
-
-Tell them where to go, how often they can expect to get an update on a
-reported vulnerability, what to expect if the vulnerability is accepted or
-declined, etc.
+| 1.0.x   | :white_check_mark: Release-To-Web version |
+| 0.9.x   | :x: DO NOT USE unless you have been asked to! |
+| 0.4.x   | :white_check_mark: **Warning!** This is still a BETA |
+| < 0.4   | :x: Alpha version               |
