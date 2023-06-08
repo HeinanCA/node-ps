@@ -27,15 +27,27 @@ sessionsRouter.route('/').get((req, res) => {
 });
 
 sessionsRouter.route('/1').get((req, res) => {
-    res.send("Hello from a single session")
+    if (req.params.id === "1") {
+        res.send("OK");
+    } else {
+        res.status(404).send("Not found");
+    }
 });
 
 app.use('/sessions', sessionsRouter);
 
 app.get('/', (req, res) => {
-    res.render('index', { title: "Heinan's website", data: ['a', 'b', 'c']});
+    try {
+        res.render('index', { title: "Heinan's website", data: ['a', 'b', 'c']});
+    } catch (e) {
+        console.error(e);
+        res.sendStatus(500);
+    }
 })
 
 app.listen(PORT, () => {
     debug(`Hello! I'm listening to port: ${chalk.green(PORT)}`);
+}).on('error', (error) => {
+    console.error(error);
+    process.exit(1);
 })
